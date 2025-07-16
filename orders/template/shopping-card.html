@@ -1,0 +1,168 @@
+{% extends base.html %}
+{% load static %}
+
+{% block title %}Shopping Card{% endblock %}
+{% block links %}
+    <link rel="stylesheet" href={% static 'css/home-page.css' %}>
+    <script src={% static 'js/home-page.js' %}></script>
+{% endblock %}
+
+{% block body %}
+<div class="progress-container">
+    <div class="step-active">
+        <img src="images/shopping-cart.svg">
+        <span>  سبد خرید</span>
+    </div>
+    <div class="dotted-line-container">
+        <div class="circle"></div>
+        <div class="dotted-line"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="step active">
+        <img src="images/location.svg">
+        <span>اطلاعات آدرس</span>
+    </div>
+    <div class="dotted-line-container">
+        <div class="circle"></div>
+        <div class="dotted-line"></div>
+        <div class="circle"></div>
+    </div>
+    <div class="step active">
+        <img src="images/money-send.svg">
+        <span>پرداخت </span>
+    </div>
+</div>
+
+<div class="cart-container">
+    <div class="cart-items">
+        <div class="item">
+            <span class="title">سبد خرید</span>
+        </div>
+        <div class="item">
+            <button class="remove-item"></button>
+            <img src="images/cart-item.svg" alt="تی‌شرت سفید طرح دار">
+            <div class="details">
+                <p>تی‌شرت سفید طرح دار</p>
+                <p>۲۴۰,۰۰۰ تومان</p>
+            </div>
+            <div>
+                <div class="quantity" style="margin-left:24px;">
+                    <button>+</button>
+                    <span>1</span>
+                    <button>-</button>
+
+                </div>
+            </div>
+            <div class="delivery-info">
+                <img src="images/truck-fast.svg" alt="ارسال">
+                <small>ارسال از ۳ روز آینده</small>
+            </div>
+        </div>
+        <div class="item">
+            <button class="remove-item"></button>
+            <img src="images/cart-item.svg" alt="تی‌شرت سفید طرح دار">
+            <div class="details">
+                <p>تی‌شرت سفید طرح دار</p>
+                <p>۲۴۰,۰۰۰ تومان</p>
+            </div>
+            <div>
+                <div class="quantity" style="margin-left:24px;">
+                    <button>+</button>
+                    <span>1</span>
+                    <button>-</button>
+
+                </div>
+            </div>
+            <div class="delivery-info">
+                <img src="images/truck-fast.svg" alt="ارسال">
+                <small>ارسال از ۳ روز آینده</small>
+            </div>
+        </div>
+    </div>
+
+<div class="checkout-summary">
+      <div class="discount-code">
+        <p class="discount-title">کد تخفیف</p>
+        <p class="discount-description">
+          کد تخفیف، کد معرف یا کارت هدیه خود را در زیر وارد کنید و روی دکمه ثبت بزنید؛ در صورت داشتن اعتبار به سفارش شما اعمال خواهد شد.
+        </p>
+        <div class="discount-input-group">
+          <input type="text" class="discount-input" >
+          <button class="discount-apply-button">ثبت</button>
+        </div>
+      </div>
+
+      <div class="summary-details">
+        <div class="summary-item">
+          <span class="item-label">قیمت کالاها</span>
+          <div class="item-value">
+            <span class="price">۲۴۰.۰۰۰</span>
+            <span class="currency">تومان</span>
+          </div>
+        </div>
+        <div class="summary-sub-item" style="margin-top:0px;">
+          <span class="sub-item-label">تعداد کالا</span>
+        </div>
+
+        <div class="summary-item">
+            <img src="images/receipt-disscount.svg">
+          <span class="item-label">مجموع تخفیف روی کالاها </span>
+          <div class="item-value discount">
+            <span class="price" >۲۰.۰۰۰</span>
+            <span class="currency">تومان</span>
+          </div>
+        </div>
+
+        <div class="summary-item">
+          <span class="item-label" style="padding:3.5px 0px 3.5px;">سود شما از خرید</span>
+          <div class="item-value profit">
+            <span class="price">۳۰.۰۰۰</span>
+            <span class="currency">تومان</span>
+          </div>
+        </div>
+
+        <div class="summary-item">
+          <span class="item-label" style="padding:0.5px 0px 7.5px;">هزینه ارسال</span>
+          <div class="item-value shipping">
+            <span class="price">۵۰.۰۰۰</span>
+            <span class="currency">تومان</span>
+          </div>
+        </div>
+
+        <div class="summary-item total">
+          <span class="item-label" style="font-size:16px;">جمع مبلغ قابل پرداخت</span>
+          <div class="item-value final-price">
+            <span class="price">۲۹۰.۰۰۰</span>
+            <span class="currency">تومان</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="checkout-button final-checkout">
+        <span>ثبت سفارش</span>
+        <span class="arrow-icon"></span>
+      </button>
+
+
+</div>
+
+</div>
+
+<div class="notes">
+        <div class="icon-notes">
+            <img src="images/info-circle.svg" style="width:24px; height:24px;"  alt="علامت هشدار">
+        </div>
+        <div class="text-notes">
+            <img src="images/Ellipse 31.svg" style="margin: 0" alt="نقطه">
+            <p>ارسال رایگان برای سفارش‌های بالای ۷۰۰,۰۰۰ تومان</p>
+        </div>
+        <div class="text-notes">
+            <img src="images/Ellipse 31.svg" style="margin: 0" alt="نقطه">
+            <p>در صورت اتمام موجودی، کالاها از سبد خرید حذف میشوند.</p>
+        </div>
+        <div class="text-notes">
+            <img src="images/Ellipse 31.svg" style="margin: 0" alt="نقطه">
+            <p>لطفا در طول مراحل خرید، فیلترشکن خود را خاموش کنید.</p>
+        </div>
+    </div>
+{% endblock %}

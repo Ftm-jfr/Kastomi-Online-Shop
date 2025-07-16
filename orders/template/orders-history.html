@@ -1,0 +1,741 @@
+{% extends base.html %}
+{% load static %}
+
+{% block title %}Orders History{% endblock %}
+{% block links %}
+    <link rel="stylesheet" href={% static 'css/orders-history.css' %}>
+    <script src={% static 'js/orders-history.js' %}></script>
+{% endblock %}
+
+{% block body %}
+<div class="main-container">
+    <h3 class="title">پروفایل</h3>
+    <div class="container">
+        <div class="profile-card">
+
+            <div class="avatar-wrapper">
+                <img src="images/Rectangle 5.svg" alt="User">
+                <div class="camera-button">
+                    <img src="images/camera.svg" alt="Camera Icon" class="menu-icon">
+                </div>
+                <div class="userinfo">
+                    <p>نگار زمانی</p>
+                    <p>xxxxxxx@Yahoo.com</p>
+                </div>
+            </div>
+
+
+            <div class="info-list">
+                <div><span>اعتبار خرید<img src="images/add-circle.svg"></span><span>۱۰۰,۰۰۰ تومان</span></div>
+                <div><span>تعداد طرح‌ها</span><span>۴۵</span></div>
+                <div><span>تعداد سفارش‌ها</span><span>۷۰</span></div>
+            </div>
+
+            <div class="profile-menu">
+                <a href="user-profile.html" style="text-decoration:none;">
+                    <img src="images/home.svg" alt="داشبورد" class="menu-icon">
+                    <span>داشبورد</span>
+                </a>
+                <div class="active-menu-item">
+                    <img src="images/activity-active.svg" alt="تاریخچه">
+                    <span>تاریخچه سفارشات</span>
+                </div>
+                <a href="#" style="text-decoration:none;">
+                    <img src="images/gallery-favorite.svg" alt="گالری" class="menu-icon">
+                    <span>گالری</span>
+                </a>
+                <a href="#" style="text-decoration:none;">
+                    <img src="images/address.svg" alt="آدرس" class="menu-icon">
+                    <span>آدرس‌ها</span>
+                </a>
+                <a href="#" style="text-decoration:none;">
+                    <img src="images/user-tick.svg" alt="دنبال شوندگان" class="menu-icon">
+                    <span>دنبال شوندگان</span>
+                </a>
+                <a href="account-info.html" style="text-decoration:none;">
+                    <img src="images/user2.svg" alt="اطلاعات حساب">
+                    <span>اطلاعات حساب کاربری</span>
+                </a>
+                <a href="#" style="text-decoration:none;">
+                    <img src="images/exit-icon.svg" alt="خروج" class="menu-icon">
+                    <span>خروج</span>
+                </a>
+            </div>
+        </div>
+        <div class="main-section">
+            <h4>تاریخچه سفارشات</h4>
+            <div class="filter_container">
+                <div><a href="#" class="active"> جاری۰</a></div>
+                <div><a href="#"> تحویل شده۲۶</a></div>
+                <div><a href="#">مرجوع شده۴</a></div>
+                <div><a href="#">لغو شده ۴</a></div>
+            </div>
+            <div class="current" id="current">
+                <div class="order-content">
+                    <p>سفارش جاری وجود ندارد.</p>
+                    <img src="images/no-order.svg" alt="no orders" width="335.42" height="327">
+                </div>
+            </div>
+            <div class="delivered hidden" id="delivered">
+                <div class="order-history">
+                    <div class="order-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-header_top">
+                               <span class="order-status">
+                                <img src="images/delivered.svg" alt="تحویل شده">
+                                تحویل شده
+                                </span>
+                                </div>
+                                <div class="order-details">
+                                    <span>۳  شهریور ۱۴۰۲  </span>
+                                    <span>کد سفارش ۳۵۴۵۳۴۵۲۱</span>
+                                    <span>مبلغ ۵۴۵,۰۰۰ تومان</span>
+                                    <span>تخفیف ۵۴۵,۰۰۰ تومان</span>
+                                </div>
+                            </div>
+
+                            <div class="product-images">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <div class="last-image-wrapper">
+                                    <img src="images/Rectangle 12.svg" alt="product">
+                                    <a href="" class="image-overlay-text" style="text-decoration: none;">14+</a>
+                                </div>
+                            </div>
+
+                            <div class="view-order">
+                                <img src="images/bill.svg" style="width:24px;height:24px;">
+                                <a href="#">مشاهده سفارش</a>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="order-history">
+                    <div class="order-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-header_top">
+                               <span class="order-status">
+                                <img src="images/delivered.svg" alt="تحویل شده">
+                                تحویل شده
+                                </span>
+                                </div>
+                                <div class="order-details">
+                                    <span>۳  شهریور ۱۴۰۲  </span>
+                                    <span>کد سفارش ۳۵۴۵۳۴۵۲۱</span>
+                                    <span>مبلغ ۵۴۵,۰۰۰ تومان</span>
+                                    <span>تخفیف ۵۴۵,۰۰۰ تومان</span>
+                                </div>
+                            </div>
+
+                            <div class="product-images">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <div class="last-image-wrapper">
+                                    <img src="images/Rectangle 12.svg" alt="product">
+                                    <a href="" class="image-overlay-text" style="text-decoration: none;">14+</a>
+                                </div>
+                            </div>
+
+                            <div class="view-order">
+                                <img src="images/bill.svg" style="width:24px;height:24px;">
+                                <a href="#">مشاهده سفارش</a>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="order-history">
+                    <div class="order-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-header_top">
+                               <span class="order-status">
+                                <img src="images/delivered.svg" alt="تحویل شده">
+                                تحویل شده
+                                </span>
+                                </div>
+                                <div class="order-details">
+                                    <span>۳  شهریور ۱۴۰۲  </span>
+                                    <span>کد سفارش ۳۵۴۵۳۴۵۲۱</span>
+                                    <span>مبلغ ۵۴۵,۰۰۰ تومان</span>
+                                    <span>تخفیف ۵۴۵,۰۰۰ تومان</span>
+                                </div>
+                            </div>
+
+                            <div class="product-images">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <div class="last-image-wrapper">
+                                    <img src="images/Rectangle 12.svg" alt="product">
+                                    <a href="" class="image-overlay-text" style="text-decoration: none;">14+</a>
+                                </div>
+                            </div>
+
+                            <div class="view-order">
+                                <img src="images/bill.svg" style="width:24px;height:24px;">
+                                <a href="#">مشاهده سفارش</a>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="order-history">
+                    <div class="order-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-header_top">
+                               <span class="order-status">
+                                <img src="images/delivered.svg" alt="تحویل شده">
+                                تحویل شده
+                                </span>
+                                </div>
+                                <div class="order-details">
+                                    <span>۳  شهریور ۱۴۰۲  </span>
+                                    <span>کد سفارش ۳۵۴۵۳۴۵۲۱</span>
+                                    <span>مبلغ ۵۴۵,۰۰۰ تومان</span>
+                                    <span>تخفیف ۵۴۵,۰۰۰ تومان</span>
+                                </div>
+                            </div>
+
+                            <div class="product-images">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <div class="last-image-wrapper">
+                                    <img src="images/Rectangle 12.svg" alt="product">
+                                    <a href="" class="image-overlay-text" style="text-decoration: none;">14+</a>
+                                </div>
+                            </div>
+
+                            <div class="view-order">
+                                <img src="images/bill.svg" style="width:24px;height:24px;">
+                                <a href="#">مشاهده سفارش</a>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="order-history">
+                    <div class="order-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-header_top">
+                               <span class="order-status">
+                                <img src="images/delivered.svg" alt="تحویل شده">
+                                تحویل شده
+                                </span>
+                                </div>
+                                <div class="order-details">
+                                    <span>۳  شهریور ۱۴۰۲  </span>
+                                    <span>کد سفارش ۳۵۴۵۳۴۵۲۱</span>
+                                    <span>مبلغ ۵۴۵,۰۰۰ تومان</span>
+                                    <span>تخفیف ۵۴۵,۰۰۰ تومان</span>
+                                </div>
+                            </div>
+
+                            <div class="product-images">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <div class="last-image-wrapper">
+                                    <img src="images/Rectangle 12.svg" alt="product">
+                                    <a href="" class="image-overlay-text" style="text-decoration: none;">14+</a>
+                                </div>
+                            </div>
+
+                            <div class="view-order">
+                                <img src="images/bill.svg" style="width:24px;height:24px;">
+                                <a href="#">مشاهده سفارش</a>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="order-history">
+                    <div class="order-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-header_top">
+                               <span class="order-status">
+                                <img src="images/delivered.svg" alt="تحویل شده">
+                                تحویل شده
+                                </span>
+                                </div>
+                                <div class="order-details">
+                                    <span>۳  شهریور ۱۴۰۲  </span>
+                                    <span>کد سفارش ۳۵۴۵۳۴۵۲۱</span>
+                                    <span>مبلغ ۵۴۵,۰۰۰ تومان</span>
+                                    <span>تخفیف ۵۴۵,۰۰۰ تومان</span>
+                                </div>
+                            </div>
+
+                            <div class="product-images">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <div class="last-image-wrapper">
+                                    <img src="images/Rectangle 12.svg" alt="product">
+                                    <a href="" class="image-overlay-text" style="text-decoration: none;">14+</a>
+                                </div>
+                            </div>
+
+                            <div class="view-order">
+                                <img src="images/bill.svg" style="width:24px;height:24px;">
+                                <a href="#">مشاهده سفارش</a>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="order-history">
+                    <div class="order-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-header_top">
+                               <span class="order-status">
+                                <img src="images/delivered.svg" alt="تحویل شده">
+                                تحویل شده
+                                </span>
+                                </div>
+                                <div class="order-details">
+                                    <span>۳  شهریور ۱۴۰۲  </span>
+                                    <span>کد سفارش ۳۵۴۵۳۴۵۲۱</span>
+                                    <span>مبلغ ۵۴۵,۰۰۰ تومان</span>
+                                    <span>تخفیف ۵۴۵,۰۰۰ تومان</span>
+                                </div>
+                            </div>
+
+                            <div class="product-images">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <div class="last-image-wrapper">
+                                    <img src="images/Rectangle 12.svg" alt="product">
+                                    <a href="" class="image-overlay-text" style="text-decoration: none;">14+</a>
+                                </div>
+                            </div>
+
+                            <div class="view-order">
+                                <img src="images/bill.svg" style="width:24px;height:24px;">
+                                <a href="#">مشاهده سفارش</a>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="order-history">
+                    <div class="order-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-header_top">
+                               <span class="order-status">
+                                <img src="images/delivered.svg" alt="تحویل شده">
+                                تحویل شده
+                                </span>
+                                </div>
+                                <div class="order-details">
+                                    <span>۳  شهریور ۱۴۰۲  </span>
+                                    <span>کد سفارش ۳۵۴۵۳۴۵۲۱</span>
+                                    <span>مبلغ ۵۴۵,۰۰۰ تومان</span>
+                                    <span>تخفیف ۵۴۵,۰۰۰ تومان</span>
+                                </div>
+                            </div>
+
+                            <div class="product-images">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <div class="last-image-wrapper">
+                                    <img src="images/Rectangle 12.svg" alt="product">
+                                    <a href="" class="image-overlay-text" style="text-decoration: none;">14+</a>
+                                </div>
+                            </div>
+
+                            <div class="view-order">
+                                <img src="images/bill.svg" style="width:24px;height:24px;">
+                                <a href="#">مشاهده سفارش</a>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="order-history">
+                    <div class="order-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-header_top">
+                               <span class="order-status">
+                                <img src="images/delivered.svg" alt="تحویل شده">
+                                تحویل شده
+                                </span>
+                                </div>
+                                <div class="order-details">
+                                    <span>۳  شهریور ۱۴۰۲  </span>
+                                    <span>کد سفارش ۳۵۴۵۳۴۵۲۱</span>
+                                    <span>مبلغ ۵۴۵,۰۰۰ تومان</span>
+                                    <span>تخفیف ۵۴۵,۰۰۰ تومان</span>
+                                </div>
+                            </div>
+
+                            <div class="product-images">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <div class="last-image-wrapper">
+                                    <img src="images/Rectangle 12.svg" alt="product">
+                                    <a href="" class="image-overlay-text" style="text-decoration: none;">14+</a>
+                                </div>
+                            </div>
+
+                            <div class="view-order">
+                                <img src="images/bill.svg" style="width:24px;height:24px;">
+                                <a href="#">مشاهده سفارش</a>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="order-history">
+                    <div class="order-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-header_top">
+                               <span class="order-status">
+                                <img src="images/delivered.svg" alt="تحویل شده">
+                                تحویل شده
+                                </span>
+                                </div>
+                                <div class="order-details">
+                                    <span>۳  شهریور ۱۴۰۲  </span>
+                                    <span>کد سفارش ۳۵۴۵۳۴۵۲۱</span>
+                                    <span>مبلغ ۵۴۵,۰۰۰ تومان</span>
+                                    <span>تخفیف ۵۴۵,۰۰۰ تومان</span>
+                                </div>
+                            </div>
+
+                            <div class="product-images">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <div class="last-image-wrapper">
+                                    <img src="images/Rectangle 12.svg" alt="product">
+                                    <a href="" class="image-overlay-text" style="text-decoration: none;">14+</a>
+                                </div>
+                            </div>
+
+                            <div class="view-order">
+                                <img src="images/bill.svg" style="width:24px;height:24px;">
+                                <a href="#">مشاهده سفارش</a>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="returned hidden" id="returned">
+                <div class="returned-items">
+                    <div class="returned-details">
+                        <p>۳ شهریور۱۴۰۲ </p>
+                        <p>کد پیگیری مرجوعی<span>۳۵۴۵۳۴۵۲۱</span></p>
+                        <button><img src="images/arrow-left-6.svg"></button>
+                    </div>
+                    <div class="returned-product">
+                        <div class="returned-header">
+                            <img src="images/canceled.svg">
+                            <p>درخواست رد شده است</p>
+                        </div>
+                        <div class="returned-images">
+                            <a href="#"><img src="images/cat-case.svg"></a>
+                            <div class="detail-images">
+                                <p style="color: #434343;font-size: 14px">قاب گوشی گربه‌ای</p>
+                                <div class="returned-description">
+                                    <img src="images/info-circle-gray.svg">
+                                    <p>محصول با طرح اشتباه ارسال شده است</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="returned-items">
+                    <div class="returned-details">
+                        <p>۳ شهریور۱۴۰۲ </p>
+                        <p>کد پیگیری مرجوعی<span>۳۵۴۵۳۴۵۲۱</span></p>
+                        <button><img src="images/arrow-left-6.svg"></button>
+                    </div>
+                    <div class="returned-product">
+                        <div class="returned-header">
+                            <img src="images/canceled.svg">
+                            <p>درخواست رد شده است</p>
+                        </div>
+                        <div class="returned-images">
+                            <a href="#"><img src="images/cat-case.svg"></a>
+                            <div class="detail-images">
+                                <p style="color: #434343;font-size: 14px">قاب گوشی گربه‌ای</p>
+                                <div class="returned-description">
+                                    <img src="images/info-circle-gray.svg">
+                                    <p>محصول با طرح اشتباه ارسال شده است</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="returned-items">
+                    <div class="returned-details">
+                        <p>۳ شهریور۱۴۰۲ </p>
+                        <p>کد پیگیری مرجوعی<span>۳۵۴۵۳۴۵۲۱</span></p>
+                        <button><img src="images/arrow-left-6.svg"></button>
+                    </div>
+                    <div class="returned-product">
+                        <div class="returned-header">
+                            <img src="images/canceled.svg">
+                            <p>درخواست رد شده است</p>
+                        </div>
+                        <div class="returned-images">
+                            <a href="#"><img src="images/cat-case.svg"></a>
+                            <div class="detail-images">
+                                <p style="color: #434343;font-size: 14px">قاب گوشی گربه‌ای</p>
+                                <div class="returned-description">
+                                    <img src="images/info-circle-gray.svg">
+                                    <p>محصول با طرح اشتباه ارسال شده است</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="returned-items">
+                    <div class="returned-details">
+                        <p>۳ شهریور۱۴۰۲ </p>
+                        <p>کد پیگیری مرجوعی<span>۳۵۴۵۳۴۵۲۱</span></p>
+                        <button><img src="images/arrow-left-6.svg"></button>
+                    </div>
+                    <div class="returned-product">
+                        <div class="returned-header">
+                            <img src="images/canceled.svg">
+                            <p>درخواست رد شده است</p>
+                        </div>
+                        <div class="returned-images">
+                            <a href="#"><img src="images/cat-case.svg"></a>
+                            <div class="detail-images">
+                                <p style="color: #434343;font-size: 14px">قاب گوشی گربه‌ای</p>
+                                <div class="returned-description">
+                                    <img src="images/info-circle-gray.svg">
+                                    <p>محصول با طرح اشتباه ارسال شده است</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="canceled hidden" id="canceled">
+                <div class="order-history">
+                    <div class="order-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-header_top">
+                               <span class="order-status">
+                                <img src="images/canceled.svg" alt="لغو شده">
+                                لغو شده
+                                </span>
+                                </div>
+                                <div class="order-details">
+                                    <span>۳  شهریور ۱۴۰۲  </span>
+                                    <span>کد سفارش ۳۵۴۵۳۴۵۲۱</span>
+                                    <span>مبلغ ۵۴۵,۰۰۰ تومان</span>
+                                </div>
+                            </div>
+
+                            <div class="product-images">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <div class="last-image-wrapper">
+                                    <img src="images/Rectangle 12.svg" alt="product">
+                                    <a href="" class="image-overlay-text" style="text-decoration: none;">14+</a>
+                                </div>
+                            </div>
+
+                            <div class="view-order">
+                                <img src="images/bill.svg" style="width:24px;height:24px;">
+                                <a href="#">مشاهده سفارش</a>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="order-history">
+                    <div class="order-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-header_top">
+                               <span class="order-status">
+                                <img src="images/canceled.svg" alt="لغو شده">
+                                لغو شده
+                                </span>
+                                </div>
+                                <div class="order-details">
+                                    <span>۳  شهریور ۱۴۰۲  </span>
+                                    <span>کد سفارش ۳۵۴۵۳۴۵۲۱</span>
+                                    <span>مبلغ ۵۴۵,۰۰۰ تومان</span>
+                                </div>
+                            </div>
+
+                            <div class="product-images">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <div class="last-image-wrapper">
+                                    <img src="images/Rectangle 12.svg" alt="product">
+                                    <a href="" class="image-overlay-text" style="text-decoration: none;">14+</a>
+                                </div>
+                            </div>
+
+                            <div class="view-order">
+                                <img src="images/bill.svg" style="width:24px;height:24px;">
+                                <a href="#">مشاهده سفارش</a>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+                <div class="order-history">
+                    <div class="order-list">
+                        <div class="order-item">
+                            <div class="order-header">
+                                <div class="order-header_top">
+                               <span class="order-status">
+                                <img src="images/canceled.svg" alt="لغو شده">
+                                لغو شده
+                                </span>
+                                </div>
+                                <div class="order-details">
+                                    <span>۳  شهریور ۱۴۰۲  </span>
+                                    <span>کد سفارش ۳۵۴۵۳۴۵۲۱</span>
+                                    <span>مبلغ ۵۴۵,۰۰۰ تومان</span>
+                                </div>
+                            </div>
+
+                            <div class="product-images">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <img src="images/Rectangle 12.svg" alt="product">
+                                <div class="last-image-wrapper">
+                                    <img src="images/Rectangle 12.svg" alt="product">
+                                    <a href="" class="image-overlay-text" style="text-decoration: none;">14+</a>
+                                </div>
+                            </div>
+
+                            <div class="view-order">
+                                <img src="images/bill.svg" style="width:24px;height:24px;">
+                                <a href="#">مشاهده سفارش</a>
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

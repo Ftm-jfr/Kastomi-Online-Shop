@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}SignUp{% endblock %}
+{% block links %}
+<link rel="stylesheet" href={% static 'css/user-signup-userInfo.css' %}>
+{% endblock %}
+
+{% block body %}
+<div class="main-container">
+    <div class="progress-container">
+        <div class="step-active">
+            <img src="{% static 'images/user1.svg' %}">
+            <span>اطلاعات کاربر</span>
+        </div>
+        <div class="dotted-line-container">
+            <div class="circle"></div>
+            <div class="dotted-line"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="step">
+            <img src="{% static 'images/call.svg' %}">
+            <span>اطلاعات تماس</span>
+        </div>
+    </div>
+
+    <h6>فرم ثبت اطلاعات</h6>
+
+    <div class="main-section">
+        <form class="form" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="{{ form.full_name.id_for_label }}">نام و نام خانوادگی</label>
+                {{ form.full_name }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.national_code.id_for_label }}">کد ملی</label>
+                {{ form.national_code }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.job.id_for_label }}">شغل (اختیاری)</label>
+                {{ form.job }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.education.id_for_label }}">تحصیلات (اختیاری)</label>
+                {{ form.education }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.email.id_for_label }}">آدرس ایمیل</label>
+                {{ form.email }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.password.id_for_label }}">کلمه عبور</label>
+                {{ form.password }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.date_of_birth.id_for_label }}">تاریخ تولد</label>
+                {{ form.date_of_birth }}
+            </div>
+            <div class="form-action">
+                <button class="submit-btn" type="submit">
+                    مرحله بعدی
+                    <img src="{% static 'images/arrow-left.svg' %}">
+                </button>
+            </div>
+        </form>
+        <div class="image">
+            <img src="{% static 'images/Photo.svg' %}">
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}SignUp{% endblock %}
+{% block links %}
+    <link rel="stylesheet" href={% static 'css/user-signup-contactInfo.css' %}>
+{% endblock %}
+
+{% block body %}
+    <div class="progress-container">
+        <a href="{% url 'signup-userInfo' %}" style="text-decoration: none;" class="step">
+            <img src="{% static 'images/user.svg' %}">
+            <span>اطلاعات کاربر</span>
+        </a>
+        <div class="dotted-line-container">
+            <div class="circle"></div>
+            <div class="dotted-line"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="step-active">
+            <img src="{% static 'images/call2.svg' %}">
+            <span>اطلاعات تماس</span>
+        </div>
+    </div>
+
+    <h6 style="margin-right:108px;color:#B95962;font-weight:bold;font-size:18px;margin-bottom:24px;">
+        فرم ثبت اطلاعات
+    </h6>
+
+    <div class="main-section">
+        <form class="form" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="{{ form.mobile_number.id_for_label }}">شماره موبایل</label>
+                {{ form.mobile_number }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.telephone_number.id_for_label }}">شماره تلفن (همراه با کد شهر)</label>
+                {{ form.telephone_number }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.province.id_for_label }}">استان</label>
+                {{ form.province }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.city.id_for_label }}">شهر</label>
+                {{ form.city }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.postal_code.id_for_label }}">کد پستی</label>
+                {{ form.postal_code }}
+            </div>
+            <div class="form-group address">
+                <label for="{{ form.full_address.id_for_label }}">آدرس کامل پستی (می‌توانید از نقشه استفاده کنید)</label>
+                {{ form.full_address }}
+            </div>
+            <div class="form-group location">
+                <img src="{% static 'images/thumbnail 2.svg' %}">
+                <img src="{% static 'images/map.svg' %}" class="map">
+            </div>
+            <div class="form-action">
+                <button class="submit-btn" type="submit">ثبت اطلاعات</button>
+            </div>
+        </form>
+        <div class="image">
+            <img src="{% static 'images/Illustration.svg' %}">
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const provinceSelect = document.querySelector('select[name="province"]');
+            const citySelect = document.querySelector('select[name="city"]');
+
+            provinceSelect.addEventListener('change', function () {
+                const provinceId = this.value;
+                if (!provinceId) {
+                    citySelect.innerHTML = '<option value="">ابتدا استان را انتخاب کنید</option>';
+                    return;
+                }
+
+                fetch("{% url 'get_cities' %}?province_id=" + provinceId)
+                    .then(response => response.json())
+                    .then(data => {
+                        citySelect.innerHTML = '';
+                        data.cities.forEach(city => {
+                            const option = document.createElement('option');
+                            option.value = city.id;
+                            option.textContent = city.name;
+                            citySelect.appendChild(option);
+                        });
+                    });
+            });
+        });
+    </script>
+
+{% endblock %}
+
+
+
+

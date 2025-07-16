@@ -1,0 +1,211 @@
+
+.container {
+    display: flex;
+    margin-top: 30px;
+    width: 100%;
+
+}
+
+.main-container h6 {
+    margin-right: 108px;
+    color: #B95962;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+/*body*/
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+
+    align-items: center;
+    margin: 32px 566px 32px 567px;
+}
+
+.step-active,
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 24px 0 24px;
+}
+
+.step-active {
+    font-size: 12px;
+    color: #A72F3B;
+}
+
+.step span {
+    font-size: 12px;
+    color: #E5C1C4
+}
+
+.step-active img {
+    height: 24px;
+    width: 24px;
+}
+
+.dotted-line-container {
+    display: flex;
+    align-items: center;
+
+    width: 125px;
+}
+
+.circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #E5C1C4;
+}
+
+.dotted-line {
+    flex-grow: 1;
+    height: 1px;
+
+    border-top: 2px dashed #E5C1C4;
+
+}
+
+
+:root {
+    --light-color: white;
+    --primary-color: #A72F3B; /* Or whatever your primary color is */
+    --text-color: #434343;
+    --secondary-text-color: #656565;
+    --border-color: #CBCBCB;
+    --light-border-color: #eee;
+    --border-radius: 8px; /* Assuming 8px is used consistently */
+}
+
+.main-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 54px;
+    border-radius: 16px;
+    margin-right: 108px;
+    align-items: end;
+}
+
+.form {
+    margin-bottom: 56px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 68px 68px 68px 68px;
+    column-gap: 24px;
+    row-gap: 24px;
+    border: 1px solid #eee;
+    border-radius: 24px;
+    padding: 24px;
+    width: 624px;
+    height: 812px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 4px;
+    font-size: 16px;
+    color: var(--border-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group button {
+    height: 40px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    padding: 8px;
+}
+
+.address {
+    grid-column: 1 / 3;
+}
+
+.location {
+    grid-column: 1 / 3;
+    margin-top: 16px;
+    position: relative;
+}
+
+.map {
+    width: 55px;
+    height: 55px;
+    position: absolute;
+    top: 137px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-group input {
+    text-align: right;
+    padding: 0 8px;
+}
+
+.form-group select {
+    padding: 10px;
+    background: transparent url(../../../static/images/arrow-down.svg) left 8px center no-repeat;
+    color: var(--secondary-text-color);
+    appearance: none;
+    padding-left: 25px;
+}
+
+.form-group input::placeholder {
+    color: var(--secondary-text-color);
+}
+
+.form-group button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    color: var(--secondary-text-color);
+    background: transparent;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group button img {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+}
+
+.submit-btn {
+    height: 48px;
+    width: 184px;
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+.form-action {
+    position: relative;
+    grid-column: 2;
+    justify-self: end;
+}
+
+.image {
+    height: 512px;
+    width: 520px;
+    margin-bottom: 54px;
+}
+
+
+.submit-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}

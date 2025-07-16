@@ -1,0 +1,228 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Other Products{% endblock %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/selected-products.css' %}">
+    <script src={% static 'js/selected-products.js' %}></script>
+{% endblock %}
+
+{% block body %}
+
+<div class="product-display">
+    <div class="thumbnail-column">
+        <img src="images/img%201.svg" class="thumbnail-image" alt="product image">
+        <img src="images/img%202.svg" class="thumbnail-image" alt="product image">
+        <img src="images/img%203.svg" class="thumbnail-image" alt="product image">
+        <img src="images/img%204.svg" class="thumbnail-image" alt="product image">
+        <button class="scroll-button"></button>
+    </div>
+    <div class="main-image-wrapper">
+        <img src="images/product-img.svg" alt="product cover" width="530" height="576">
+        <div class="color-selection-overlay">
+            <div class="color-options-list">
+                <div class="color-swatch yellow-swatch"></div>
+                <div class="color-swatch green-swatch"></div>
+                <div class="color-swatch red-swatch selected-swatch">
+                    <img src="images/check-icon.svg" class="selection-check-icon">
+                </div>
+                <div class="color-swatch black-swatch"></div>
+                <div class="color-swatch white-swatch"></div>
+            </div>
+        </div>
+    </div>
+    <div class="product-info">
+        <h4>مشخصات محصول</h4>
+        <p>جنس: نخ، پلی استر</p>
+        <p>شستشو: با دست</p>
+        <p>سایزها: S, M, L, XL, XXL, XXXL</p>
+        <p>رنگ‌ها: مشکی، سفید، قرمز، سبز، نارنجی، زرشکی، بنفش</p>
+        <p>قد: ۶۰ سانتی‌ متر</p>
+        <select class="size-selector">
+            <option selected>M</option>
+        </select>
+        <div class="price">۱۲۷٬۰۰۰ تومان</div>
+        <div class="action-buttons">
+            <a  href="shopping-card.html" class="add-to-cart">
+                <button>افزودن به سبد</button>
+                <img src="images/shopping-cart-white.svg">
+            </a>
+            <div class="customize-product">
+                <button>شخصی سازی محصول</button>
+                <img src="images/magicpen-red.svg">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="review-section">
+    <div class="user-score">
+        <p style="color: #86262F;font-size: 22px;font-weight: bold;margin-bottom: 0">امتیاز و دیدگاه کاربران</p>
+        <p style="color: #898989; font-size: 18px; margin-top: 20px;margin-bottom: 0"><span>۴.۱</span> از ۵</p>
+        <div class="rating-stars">
+            <img src="images/star.svg">
+            <img src="images/star.svg">
+            <img src="images/star.svg">
+            <img src="images/star.svg">
+            <img src="images/star-empty.svg">
+            <p>از مجموع 120 امتیاز</p>
+        </div>
+        <p style="color: #656565; font-size: 12px;margin-top: 10px;margin-bottom: 0">نظر خود را ثبت کنید</p>
+        <button id="openCommentModalBtn" class="submit-comment-button">ثبت دیدگاه</button>
+
+        <div id="commentModal" class="modal-overlay hidden">
+            <div class="modal-content">
+                <div class="header-comment">
+                    <h5>نظر خود را با ما در میان بگذارید</h5>
+                    <button id="close"><img src="images/close-circle-black.svg"></button>
+                </div>
+                <p>در مورد تیشرت ساده سفید</p>
+                <div class="modal-rating">
+                    <p>امتیاز دهید</p>
+                    <div class="modal-stars">
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                        <button></button>
+                    </div>
+                </div>
+
+                <div class="modal-form-group">
+                    <label for="commentTitle">عنوان نظر</label>
+                    <input type="text" id="commentTitle">
+                </div>
+
+                <div class="modal-form-group">
+                    <label for="commentPositive">نکات مثبت</label>
+                    <input type="text" id="commentPositive">
+                    <button><img src="images/add-circle-black.svg"></button>
+                </div>
+
+                <div class="modal-form-group">
+                    <label for="commentNegative">نکات منفی</label>
+                    <input type="text" id="commentNegative">
+                    <button><img src="images/add-circle-black.svg"></button>
+                </div>
+
+                <div class="modal-form-group">
+                    <label for="commentText">متن نظر</label>
+                    <textarea id="commentText" placeholder="متن نظر خود را وارد کنید" required></textarea>
+                </div>
+                <div class="modal-submit">
+                    <button type="submit" class="submit-comment" id="submitComment">ثبت دیدگاه</button>
+                    <p>ثبت دیدگاه به معنی موافقت شما با قوانین انتشار کاستومی است.</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="user-comments">
+        <div style="border-bottom: 1px solid #EDEDED">
+            <div class="satisfaction">
+                <img src="images/like.svg">
+                <p>۷۰% (۱۲۰ نفر) از خرید این محصول رضایت داشته اند</p>
+            </div>
+            <div class="satisfaction-images">
+                <img src="images/product-img.svg">
+                <img src="images/tshirt2.svg">
+                <img src="images/tshirt3.svg">
+            </div>
+            <a href="#" class="view-more">مشاهده بیشتر</a>
+        </div>
+        <div class="comment-item">
+            <div class="comment-header">
+                <p style="margin-left: 32px">۱۶ آذر ۱۴۰۲</p>
+                <p>نگار زمانی</p>
+                <p style="color: #00966D; margin-right: 20px">خریدار</p>
+                <div class="commenter-score">
+                    <img src="images/star.svg">
+                    <img src="images/star.svg">
+                    <img src="images/star.svg">
+                    <img src="images/star-empty.svg">
+                    <img src="images/star-empty.svg">
+                </div>
+            </div>
+            <div class="comment-body">
+                <p>بسیار عالی و باکیفیت</p>
+                <div class="comment-features">
+                    <div>
+                        <p><span style="color: #00966D;margin-left:5px;">+</span> خنک</p>
+                        <p><span style="color: #00966D;margin-left:5px;">+</span> با کیفیت</p>
+                    </div>
+                    <div>
+                        <p><img src="images/minus.svg"> گران</p>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-actions">
+                <p>آیا این دیدگاه مفید بود؟</p>
+                <button><img src="images/like.svg"></button>
+                <button><img src="images/dislike.svg"></button>
+            </div>
+        </div>
+        <div class="comment-item">
+            <div class="comment-header">
+                <p style="margin-left: 32px">۱۶ آذر ۱۴۰۲</p>
+                <p>نگار زمانی</p>
+                <p style="color: #00966D; margin-right: 20px">خریدار</p>
+                <div class="commenter-score">
+                    <img src="images/star.svg">
+                    <img src="images/star.svg">
+                    <img src="images/star.svg">
+                    <img src="images/star-empty.svg">
+                    <img src="images/star-empty.svg">
+                </div>
+            </div>
+            <div class="comment-body">
+                <p>بسیار عالی و باکیفیت</p>
+                <div class="comment-features">
+                    <div>
+                        <p><span style="color: #00966D;margin-left:5px;">+</span> خنک</p>
+                        <p><span style="color: #00966D;margin-left:5px;">+</span> با کیفیت</p>
+                    </div>
+                    <div>
+                        <p><img src="images/minus.svg"> گران</p>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-actions">
+                <p>آیا این دیدگاه مفید بود؟</p>
+                <button><img src="images/like.svg"></button>
+                <button><img src="images/dislike.svg"></button>
+            </div>
+        </div>
+        <div class="comment-item">
+            <div class="comment-header">
+                <p style="margin-left: 32px">۱۶ آذر ۱۴۰۲</p>
+                <p>نگار زمانی</p>
+                <p style="color: #00966D; margin-right: 20px">خریدار</p>
+                <div class="commenter-score">
+                    <img src="images/star.svg">
+                    <img src="images/star.svg">
+                    <img src="images/star.svg">
+                    <img src="images/star-empty.svg">
+                    <img src="images/star-empty.svg">
+                </div>
+            </div>
+            <div class="comment-body">
+                <p>بسیار عالی و باکیفیت</p>
+                <div class="comment-features">
+                    <div>
+                        <p><span style="color: #00966D;margin-left:5px;">+</span> خنک</p>
+                        <p><span style="color: #00966D;margin-left:5px;">+</span> با کیفیت</p>
+                    </div>
+                    <div>
+                        <p><img src="images/minus.svg"> گران</p>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-actions">
+                <p>آیا این دیدگاه مفید بود؟</p>
+                <button><img src="images/like.svg"></button>
+                <button><img src="images/dislike.svg"></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

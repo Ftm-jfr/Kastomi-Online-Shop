@@ -1,0 +1,216 @@
+* {
+box-sizing: border-box;
+    font-family: 'IRANyekan', "IRANSans Medium", sans-serif;
+}
+
+/* Header Styles */
+.main-header {
+    direction: rtl;
+
+}
+
+.header-top-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 108px;
+    padding-right: 108px;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 24px;
+}
+
+.brand-logo {
+    display: flex;
+    margin-top: 26.61px;
+    margin-bottom: 26.62px;
+    align-items: center;
+    width: 188.91px;
+    height: 50.77px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand-title {
+    margin: 0;
+    font-size: 1.9rem;
+
+
+    color: #333;
+}
+
+.logo-highlight {
+    color: #A72F3B;
+}
+
+.brand-subtitle {
+    margin: 0;
+    font-size: 0.8rem;
+
+    color: #666;
+}
+
+/* Search Section */
+.search-container {
+    position: relative;
+    margin-top: 28px;
+    margin-bottom: 28px;
+    width: 596px;
+    height: 48px;
+}
+
+.search-input {
+    width: 596px;
+    padding: 11.5px 24px 11.5px;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    font-size: 16px;
+    color: #A72F3B;
+    direction: rtl;
+}
+
+.search-button {
+    position: absolute;
+    left: 12.5px;
+    bottom: 12px;
+    top:12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.search-button img {
+    width: 24px;
+    height: 24px;
+}
+
+/* User Actions */
+.user-actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    margin-top: 32px;
+}
+
+.action-link {
+    padding: 8px 24px 8px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    text-decoration: none;
+    color: #434343;
+    font-size: 14px;
+}
+
+.cart-link {
+    position: relative;
+}
+
+.cart-counter {
+    position: absolute;
+    top: 4px;
+    right: 16px;
+    background: #DCACB1;
+    color: black;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.6rem;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-section {
+    flex: 1;
+    text-align: center;
+}
+
+.image-section img {
+    max-width: 90%;
+    height: auto;
+}
+
+.form-section {
+    flex: 1;
+    max-width: 400px;
+    padding: 2rem;
+    padding-right:0;
+    margin-right:108px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.login-btn {
+    width: 100%;
+    background-color: #A22828;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.google-login {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    color: #333;
+    margin: 10px 0;
+    text-decoration: none;
+}
+
+.register-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+a {
+    color: #A22828;
+    text-decoration: none;
+}
+
+.divider {
+    text-align: center;
+    margin: 15px 0;
+    color: #999;
+}

@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+</head>
+<header class="main-header">
+    <!-- Top row (logo, search, user actions) -->
+    <div class="header-top-row">
+        <!-- Logo Section -->
+        <div class="brand-logo">
+            <img src="../../static/images/LOGO.svg" alt="Customy Logo" class="logo-img">
+            <div class="brand-text">
+                <h1 class="brand-title"><span class="logo-highlight">ک</span>استومی</h1>
+                <p class="brand-subtitle">فروشگاه اینترنتی</p>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-container">
+            <label>
+                <input type="search" placeholder="جستجو" class="search-input">
+            </label>
+            <button class="search-button">
+                <img src="../../static/images/search-normal.svg" alt="جستجو">
+            </button>
+        </div>
+
+        <!-- User Actions -->
+        <div class="user-actions">
+            {% block useraction %}
+                <a href="../../accounts/templates/user-signup-userInfo.html" class="action-link">
+                    <img src="../../static/images/Login.svg" alt="ورود" class="action-icon">
+                    <span>ورود | ثبت‌نام</span>
+                </a>
+            {% endblock %}
+            <a href="../../orders/template/shopping-card.html" class="action-link cart-link">
+                <img src="../../static/images/shopping-cart-empty.svg" alt="سبد خرید" class="action-icon">
+                <span>سبد خرید</span>
+                <span class="cart-counter">0</span>
+            </a>
+        </div>
+    </div>
+</header>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h4>به کاستومی خوش آمدید</h4>
+            <h6>ورود / ثبت نام</h6>
+
+            <form method="post">
+                {% csrf_token %}
+                {{ form.non_field_errors }}
+                <div class="form-group">
+                    {{ form.username.errors }}
+                    {{ form.username }}
+                </div>
+                <div class="form-group">
+                    {{ form.password.errors }}
+                    {{ form.password }}
+                    <a href="#">فراموشی رمز عبور</a>
+                </div>
+                <button type="submit" class="login-btn">ورود به سایت</button>
+            </form>
+
+            <div class="divider">یا</div>
+            <a href="#" class="google-login">ورود با حساب گوگل</a>
+
+            <p class="register-link">
+                <a href="user-signup-userInfo.html">ثبت نام در سایت</a>
+            </p>
+        </div>
+        <div class="image-section">
+            <img src="{% static 'images/login-illustration.svg' %}" alt="illustration">
+        </div>
+
+    </div>
+</body>
+</html>
+

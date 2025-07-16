@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% block links %}{% endblock %}
+</head>
+<header class="main-header">
+    <!-- Top row (logo, search, user actions) -->
+    <div class="header-top-row">
+        <!-- Logo Section -->
+        <div class="brand-logo">
+            <img src="{% static 'images/LOGO.svg' %}" alt="Customy Logo" class="logo-img">
+            <div class="brand-text">
+                <h1 class="brand-title"><span class="logo-highlight">ک</span>استومی</h1>
+                <p class="brand-subtitle">فروشگاه اینترنتی</p>
+            </div>
+        </div>
+
+        <!-- Search Section -->
+        <div class="search-container">
+            <label>
+                <input type="search" placeholder="جستجو" class="search-input">
+            </label>
+            <button class="search-button">
+                <img src="{% static 'images/search-normal.svg' %}" alt="جستجو">
+            </button>
+        </div>
+
+        <!-- User Actions -->
+        <div class="user-actions">
+            {% if user.is_authenticated %}
+            <a href="{% url 'user_profile' %} } class="action-link">
+                <img src="{% static 'images/user2.svg' %}" alt="ورود" class="action-icon">
+                <span>حساب کاربری</span>
+            </a>
+        {% else %}
+            <a href="{% url 'signup-userInfo' %}" class="action-link">
+                <img src="{% static 'images/Login.svg' %}" alt="ورود" class="action-icon">
+                <span>ورود | ثبت‌نام</span>
+            </a>
+        {% endif %}
+            <a href="#" class="action-link cart-link">
+                <img src="{% static 'images/shopping-cart-empty.svg' %}" alt="سبد خرید" class="action-icon">
+                <span>سبد خرید</span>
+                <span class="cart-counter">0</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Navigation - Same as before but now inside header -->
+    <div class="header-navigation">
+        <div class="nav-container">
+            <a href="#" class="nav-item highlight-item">
+                <img src="{% static 'images/magicpen.svg' %}" alt="طراحی سفارشی" class="nav-icon">
+                <span>خودت طراحیش کن!</span>
+            </a>
+            <a href="#" class="nav-item">پوشاک</a>
+            <a href="#" class="nav-item">لوازم خانه</a>
+            <a href="#" class="nav-item">قاب موبایل</a>
+            <a href="#" class="nav-item">اکسسوری</a>
+            <a href="#" class="nav-item">مدرسه و اداره</a>
+            <a href="#" class="nav-item">کارت و پوستر</a>
+            <a href="#" class="nav-item">جشن و مهمانی</a>
+        </div>
+    </div>
+</header>
+<body>
+{% block body %}
+{% endblock %}
+</body>
+<footer class="footer">
+    <div class="footer-top-container">
+        <div class="footer-newsletter">
+            <p>برای دریافت آخرین اخبار و تخفیف های جدید، ایمیل خود را وارد نمایید</p>
+            <form class="newsletter-form">
+                <label>
+                    <input type="email" placeholder="ایمیل شما">
+                </label>
+                <button type="submit">ثبت</button>
+            </form>
+        </div>
+        <div class="social-follow">
+            <p>ما را در شبکه های اجتماعی دنبال کنید</p>
+            <div class="social-icons">
+                <a href="#"><img src="{% static 'images/g10.svg' %}" style="width:32px;height:20px;" alt="YouTube"></a>
+                <a href="#"><img src="{% static 'images/Pinterest svg.svg' %}" alt="Pinterest"></a>
+                <a href="#"><img
+                        src="{% static 'images/174-1744532_facebook-icon-link-facebook-white-icon-hd-png-fotor-bg-remover-2023041811029 1.svg' %}"
+                        alt="Facebook"></a>
+
+                <a href="#"><img src="{% static 'images/Instagram svg.svg' %}" alt="Instagram"></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottem">
+
+        <div class="footer-columns">
+            <div class="footer-column">
+                <h4>همراه با کاستومی</h4>
+                <ul>
+                    <li><a href="#">فروش محصولات</a></li>
+                    <li><a href="#">فرصت همکاری</a></li>
+                    <li><a href="#">تماس با ما</a></li>
+                    <li><a href="#">درباره ما</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>خدمات مشتریان</h4>
+                <ul>
+                    <li><a href="#">سوالات متداول</a></li>
+                    <li><a href="#">حریم خصوصی</a></li>
+                    <li><a href="#">ثبت شکایت</a></li>
+                    <li><a href="#">ضمانت نامه محصولات</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>راهنمای خرید</h4>
+                <ul>
+                    <li><a href="#">راهنمای ثبت سفارش</a></li>
+                    <li><a href="#">شیوه های پرداخت</a></li>
+                    <li><a href="#">نحوه ارسال سفارش ها</a></li>
+                    <li><a href="#">شرایط بازگرداندن محصول</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-info">
+            <div class="footer-title">
+                <h6>فروشگاه اینترنتی کاستومی</h6>
+            </div>
+            <div class="contact-info">
+                <span class="contact-label" style="margin-left:8px;">تماس با پشتیبانی:</span>
+                <span class="contact-phone" style="margin-left:32px;">021-3456000</span>
+                <span class="contact-hours">پاسخگویی 24 ساعته، 7 روز هفته</span>
+            </div>
+
+            <div class="certificates">
+                <img src="{% static 'images/certificate1.svg' %}" alt="Certificate 1">
+                <img src="{% static 'images/certificate2.svg' %}" alt="Certificate 2">
+                <img src="{% static 'images/certificate3.svg' %}" alt="Certificate 3">
+            </div>
+        </div>
+    </div>
+
+
+    <p class="footer-copy">تمامی حقوق این وبسایت
+        متعلق به فروشگاه اینترنتی کاستومی می‌باشد.</p>
+
+</footer>
+</html>

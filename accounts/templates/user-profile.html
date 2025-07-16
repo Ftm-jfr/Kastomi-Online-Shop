@@ -1,0 +1,275 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}User Profile{% endblock %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/users_profile.css' %}">
+{% endblock %}
+
+
+
+{% block body %}
+
+    <h3 style="margin-bottom:20px;margin-right:108px;font-size:45px;padding:0px;width:105px;height:50px;">پروفایل</h3>
+    <div class="container">
+
+        <div class="profile-card">
+
+            <div class="avatar-wrapper">
+                {% if user.avatar %}
+                    <img src="{{ user.avatar.url }}" alt="User">
+                {% else %}
+                    <img src="../../media/avatars/default-avatar.svg" alt="User">
+                {% endif %}
+                <div class="camera-button">
+                    <img src="../../static/images/camera.svg" alt="Camera Icon" class="menu-icon">
+                </div>
+                <div class="userinfo">
+                    <p>{{ user.full_name }}</p>
+                    <p>{{ user.email }}</p>
+                </div>
+            </div>
+
+            <div class="info-list">
+                <div><span>اعتبار خرید<img
+                        src="{% static 'images/add-circle.svg' %}"></span><span>{{ profile.credit_balance }}</span>
+                </div>
+                <div><span>تعداد طرح‌ها</span><span>{{ profile.designs_count }}</span></div>
+                <div><span>تعداد سفارش‌ها</span><span>{{ profile.orders_count }}</span></div>
+            </div>
+
+            <div class="profile-menu">
+                <div class="active-menu-item">
+                    <img src="../../static/images/home-active.svg" alt="داشبورد">
+                    <span>داشبورد</span>
+                </div>
+                <a href="orders-history.html" style="text-decoration:none;">
+
+                    <img src="../../static/images/activity.svg" alt="تاریخچه">
+                    <span>تاریخچه سفارشات</span>
+
+                </a>
+                <a href="#" style="text-decoration:none;">
+                    <img src="../../static/images/gallery-favorite.svg" alt="گالری" class="menu-icon">
+                    <span>گالری</span>
+                </a>
+                <a href="#" style="text-decoration:none;">
+                    <img src="../../static/images/address.svg" alt="آدرس" class="menu-icon">
+                    <span>آدرس‌ها</span>
+                </a>
+                <a href="#" style="text-decoration:none;">
+                    <img src="../../static/images/user-tick.svg" alt="دنبال شوندگان" class="menu-icon">
+                    <span>دنبال شوندگان</span>
+                </a>
+                <a href="account-info.html" style="text-decoration:none;">
+                    <img src="../../static/images/user2.svg" alt="اطلاعات حساب" class="menu-icon">
+                    <span>اطلاعات حساب کاربری</span>
+                </a>
+                <a href="{% url 'logout' %}" style="text-decoration:none;">
+                    <img src="../../static/images/exit-icon.svg" alt="خروج" class="menu-icon">
+                    <span>خروج</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="main-section">
+            <div class="section">
+                <h4>سفارشات من</h4>
+                <div class="order-stats">
+                    <div class="order-text">
+                        <div class="order-line">
+                            <img src="../../static/images/more-circle.svg" alt="آیکون سفارش" class="order-icon">
+                            <strong>۴۵ سفارش</strong>
+                        </div>
+                        <span>جاری</span>
+                    </div>
+                    <div class="order-text">
+                        <div class="order-line">
+                            <img src="../../static/images/tick-circle.svg" class="order-icon">
+                            <strong>۴۵ سفارش</strong>
+                        </div>
+                        <span>ارسال شده</span>
+                    </div>
+                    <div class="order-text">
+                        <div class="order-line">
+                            <img src="../../static/images/gallery-favorite2.svg" class="order-icon">
+                            <strong>۱۰ محصول</strong>
+                        </div>
+                        <span>در گالری</span>
+                    </div>
+                    <div class="order-text">
+                        <div class="order-line">
+                            <img src="../../static/images/messages-2.svg" class="order-icon">
+                            <strong>۵۴ نظر</strong>
+                        </div>
+                        <span>ثبت شده</span>
+                    </div>
+                    <div class="order-text">
+                        <div class="order-line">
+                            <img src="../../static/images/close-circle.svg" class="order-icon">
+                            <strong>۲۱۵ سفارش</strong>
+                        </div>
+                        <span>لغو شده</span>
+                    </div>
+                    <div class="order-text">
+                        <div class="order-line">
+                            <img src="../../static/images/bag-happy.svg" class="order-icon">
+                            <strong>۲۸ محصول</strong>
+                        </div>
+                        <span>فیزیکی</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="products-section">
+                <div class="section-header">
+                    <h4>علاقه مندی های من</h4>
+                    <a href="#" class="view-more">مشاهده بیشتر</a>
+                </div>
+                <div class="products-container">
+                    <button class="arrow-button left">
+                        <svg width="48" height="48" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 41.5C8.14 41.5 -1.5 31.86 -1.5 20C-1.5 8.14 8.14 -1.5 20 -1.5C31.86 -1.5 41.5 8.14 41.5 20C41.5 31.86 31.86 41.5 20 41.5ZM20 1.5C9.8 1.5 1.5 9.8 1.5 20C1.5 30.2 9.8 38.5 20 38.5C30.2 38.5 38.5 30.2 38.5 20C38.5 9.8 30.2 1.5 20 1.5Z"
+                                  fill="#86262F"/>
+                            <path d="M27 21.5H15C14.18 21.5 13.5 20.82 13.5 20C13.5 19.18 14.18 18.5 15 18.5H27C27.82 18.5 28.5 19.18 28.5 20C28.5 20.82 27.82 21.5 27 21.5Z"
+                                  fill="#86262F"/>
+                            <path d="M18.9999 27.5028C18.6199 27.5028 18.2399 27.3628 17.9399 27.0628L11.9399 21.0628C11.3599 20.4828 11.3599 19.5228 11.9399 18.9428L17.9399 12.9428C18.5199 12.3628 19.4799 12.3628 20.0599 12.9428C20.6399 13.5228 20.6399 14.4828 20.0599 15.0628L15.1199 20.0028L20.0599 24.9428C20.6399 25.5228 20.6399 26.4828 20.0599 27.0628C19.7599 27.3628 19.3799 27.5028 18.9999 27.5028Z"
+                                  fill="#86262F"/>
+                        </svg>
+                    </button>
+                    <div class="products">
+                        {% for favorite in user.favorites.all %}
+                            <div class="product-card">
+                                {% with favorite.product.images.first as product_image %}
+                                    {% if product_image %}
+                                        <img class="product-card-img" style="" src="{{ product_image.image.url }}"
+                                             alt="{{ favorite.product.name }}">
+                                    {% else %}
+                                        <img src="/media/product_images/default.svg" alt="default image">
+                                    {% endif %}
+                                {% endwith %}
+
+                                <div class="item-title">
+                                    <h6>{{ favorite.product.name }}</h6>
+                                    <button>
+                                        <img src="{% static 'images/heart-red.svg' %}" class="favorite">
+                                    </button>
+                                </div>
+                                <p>{{ favorite.product.description|truncatewords:10 }}</p>
+                                <h5 class="price">{{ favorite.product.price|floatformat:0 }} تومان</h5>
+                            </div>
+                        {% empty %}
+                            <p>هنوز محصولی به علاقه‌مندی‌های شما اضافه نشده.</p>
+                        {% endfor %}
+                    </div>
+
+                </div>
+            </div>
+
+            <section class="products-section">
+                <div class="section-header">
+                    <h4>خرید های پرتکرار من</h4>
+                    <a href="#" class="view-more">مشاهده بیشتر</a>
+                </div>
+                <div class="products-container">
+                    <button class="arrow-button left">
+                        <svg width="48" height="48" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 41.5C8.14 41.5 -1.5 31.86 -1.5 20C-1.5 8.14 8.14 -1.5 20 -1.5C31.86 -1.5 41.5 8.14 41.5 20C41.5 31.86 31.86 41.5 20 41.5ZM20 1.5C9.8 1.5 1.5 9.8 1.5 20C1.5 30.2 9.8 38.5 20 38.5C30.2 38.5 38.5 30.2 38.5 20C38.5 9.8 30.2 1.5 20 1.5Z"
+                                  fill="#86262F"/>
+                            <path d="M27 21.5H15C14.18 21.5 13.5 20.82 13.5 20C13.5 19.18 14.18 18.5 15 18.5H27C27.82 18.5 28.5 19.18 28.5 20C28.5 20.82 27.82 21.5 27 21.5Z"
+                                  fill="#86262F"/>
+                            <path d="M18.9999 27.5028C18.6199 27.5028 18.2399 27.3628 17.9399 27.0628L11.9399 21.0628C11.3599 20.4828 11.3599 19.5228 11.9399 18.9428L17.9399 12.9428C18.5199 12.3628 19.4799 12.3628 20.0599 12.9428C20.6399 13.5228 20.6399 14.4828 20.0599 15.0628L15.1199 20.0028L20.0599 24.9428C20.6399 25.5228 20.6399 26.4828 20.0599 27.0628C19.7599 27.3628 19.3799 27.5028 18.9999 27.5028Z"
+                                  fill="#86262F"/>
+                        </svg>
+                    </button>
+                    <div class="products">
+
+                        <div class="product-card">
+                            <img src="../../static/images/iphone-case.svg" alt="تی‌شرت مردانه">
+                            <div class="item-title">
+                                <h6>کیف زنانه</h6>
+                                <button><img src="../../static/images/heart.svg" class="favorite"></button>
+                            </div>
+                            <p> رنگ‌ بندی متنوع، قابل طراحی</p>
+                            <h5 class="price">۱۵۰,۰۰۰ تومان</h5>
+                        </div>
+                        <div class="product-card">
+                            <img src="../../static/images/hat.svg" alt="تی‌شرت مردانه">
+                            <div class="item-title">
+                                <h6>جوراب زنانه</h6>
+                                <button><img src="../../static/images/heart.svg" class="favorite"></button>
+                            </div>
+                            <p> رنگ‌ بندی متنوع، قابل طراحی</p>
+                            <h5 class="price">۱۵۰,۰۰۰ تومان</h5>
+                        </div>
+                        <div class="product-card">
+                            <img src="../../static/images/tshirt5.svg" alt="تی‌شرت مردانه">
+                            <div class="item-title">
+                                <h6>جوراب زنانه</h6>
+                                <button><img src="../../static/images/heart-red.svg" class="favorite"></button>
+                            </div>
+                            <p> رنگ‌ بندی متنوع، قابل طراحی</p>
+                            <h5 class="price">۱۵۰,۰۰۰ تومان</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="product-section">
+                <div class="section-header">
+                    <h4>گالری من</h4>
+                    <a href="#" class="view-more">مشاهده بیشتر</a>
+                </div>
+                <div class="products-container">
+                    <button class="arrow-button left">
+                        <svg width="48" height="48" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 41.5C8.14 41.5 -1.5 31.86 -1.5 20C-1.5 8.14 8.14 -1.5 20 -1.5C31.86 -1.5 41.5 8.14 41.5 20C41.5 31.86 31.86 41.5 20 41.5ZM20 1.5C9.8 1.5 1.5 9.8 1.5 20C1.5 30.2 9.8 38.5 20 38.5C30.2 38.5 38.5 30.2 38.5 20C38.5 9.8 30.2 1.5 20 1.5Z"
+                                  fill="#86262F"/>
+                            <path d="M27 21.5H15C14.18 21.5 13.5 20.82 13.5 20C13.5 19.18 14.18 18.5 15 18.5H27C27.82 18.5 28.5 19.18 28.5 20C28.5 20.82 27.82 21.5 27 21.5Z"
+                                  fill="#86262F"/>
+                            <path d="M18.9999 27.5028C18.6199 27.5028 18.2399 27.3628 17.9399 27.0628L11.9399 21.0628C11.3599 20.4828 11.3599 19.5228 11.9399 18.9428L17.9399 12.9428C18.5199 12.3628 19.4799 12.3628 20.0599 12.9428C20.6399 13.5228 20.6399 14.4828 20.0599 15.0628L15.1199 20.0028L20.0599 24.9428C20.6399 25.5228 20.6399 26.4828 20.0599 27.0628C19.7599 27.3628 19.3799 27.5028 18.9999 27.5028Z"
+                                  fill="#86262F"/>
+                        </svg>
+                    </button>
+                    <div class="products">
+                        <div class="product-card">
+                            <img src="../../static/images/friends-sticker.svg" alt="استیکر ">
+                            <div class="item-title">
+                                <h6>استیکر فرندز</h6>
+                                <button><img src="../../static/images/heart.svg"></button>
+                            </div>
+                            <p>قابل طراحی و چاپ بر روی انواع محصولات</p>
+                            <button class="add-to-gallery">
+                                <img src="../../static/images/gallery-add.svg">افزودن به گالری
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <img src="../../static/images/watermelon-sticker.svg" alt="استیکر ">
+                            <div class="item-title">
+                                <h6>استیکر فرندز</h6>
+                                <button><img src="../../static/images/heart.svg"></button>
+                            </div>
+                            <p>قابل طراحی و چاپ بر روی انواع محصولات</p>
+                            <button class="add-to-gallery">
+                                <img src="../../static/images/gallery-add.svg">افزودن به گالری
+                            </button>
+                        </div>
+                        <div class="product-card">
+                            <img src="../../static/images/girl-sticker.svg" alt="استیکر ">
+                            <div class="item-title">
+                                <h6>استیکر فرندز</h6>
+                                <button><img src="../../static/images/heart.svg"></button>
+                            </div>
+                            <p>قابل طراحی و چاپ بر روی انواع محصولات</p>
+                            <button class="add-to-gallery">
+                                <img src="../../static/images/gallery-add.svg">افزودن به گالری
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+{% endblock %}

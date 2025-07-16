@@ -1,0 +1,123 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Account Information{% endblock %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/account-info.css' %}">
+{% endblock %}
+
+{% block body %}
+
+    <h3 class="title">پروفایل</h3>
+    <div class="container">
+        <div class="profile-card">
+
+            <div class="avatar-wrapper">
+
+                {% if user.profile.avatar %}
+                    <img src="{{ user.profile.avatar.url }}" alt="avatar">
+                {% else %}
+                    <img src="{% static 'images/Rectangle 5.svg' %}" alt="default avatar">
+                {% endif %}
+
+                <div class="camera-button">
+                    <img src="{% static 'images/camera.svg' %}" alt="Camera" class="menu-icon">
+                </div>
+
+                <div class="userinfo">
+                    <p>{{ user.full_name }}</p>
+                    <p>{{ user.email }}</p>
+                </div>
+
+            </div>
+
+
+            <div class="info-list">
+                <div><span>اعتبار خرید<img src="{% static 'images/add-circle.svg' %}"
+                                           alt="Add Icon"></span><span>{{ profile.credit_balance }}</span></div>
+                <div><span>تعداد طرح‌ها</span><span>{{ profile.design_count }}</span></div>
+                <div><span>تعداد سفارش‌ها</span><span>{{ profile.orders_count }}</span></div>
+            </div>
+
+            <div class="profile-menu">
+                <a href="{% url 'user_profile' %}" style="text-decoration:none;">
+                    <img src="{% static 'images/home.svg' %}" alt="داشبورد" class="menu-icon">
+                    <span>داشبورد</span>
+                </a>
+                <a href="#" style="text-decoration:none;">
+                    <img src="{% static 'images/activity.svg' %}" alt="تاریخچه">
+                    <span>تاریخچه سفارشات</span>
+                </a>
+                <a href="#" style="text-decoration:none;">
+                    <img src="{% static 'images/gallery-favorite.svg' %}" alt="گالری" class="menu-icon">
+                    <span>گالری</span>
+                </a>
+                <a href="#" style="text-decoration:none;">
+                    <img src="{% static 'images/address.svg' %}" alt="آدرس" class="menu-icon">
+                    <span>آدرس‌ها</span>
+                </a>
+                <a href="#" style="text-decoration:none;">
+                    <img src="{% static 'images/user-tick.svg' %}" alt="دنبال شوندگان" class="menu-icon">
+                    <span>دنبال شوندگان</span>
+                </a>
+                <div class="active-menu-item">
+                    <img src="{% static 'images/user-icon.svg' %}" alt="اطلاعات حساب">
+                    <span>اطلاعات حساب کاربری</span>
+                </div>
+                <a href="{% url 'logout' %}" style="text-decoration:none;">
+                    <img src="{% static 'images/exit-icon.svg' %}" alt="خروج" class="menu-icon">
+                    <span>خروج</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="main-section">
+            <h4>اطلاعات حساب کاربری</h4>
+            <div class="filter_container">
+                <div><a href="#" class="active">اطلاعات کاربری</a></div>
+                <div><a href="#">اطلاعات تماس</a></div>
+            </div>
+
+            <form method="POST" class="form">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label>نام و نام خانوادگی</label>
+                    {{ form.full_name }}
+                </div>
+                <div class="form-group">
+                    <label>کد ملی</label>
+                    {{ form.national_code }}
+                </div>
+                <div class="form-group">
+                    <label>تحصیلات (اختیاری)</label>
+                    {{ form.education }}
+                </div>
+                <div class="form-group">
+                    <label>شغل (اختیاری)</label>
+                    {{ form.job }}
+                </div>
+                <div class="form-group">
+                    <label>تاریخ تولد</label>
+                    {{ form.date_of_birth }}
+                </div>
+                <div class="form-group">
+                    <label>آدرس ایمیل</label>
+                    {{ form.email }}
+                </div>
+                <div class="form-group">
+                    <label>تکرار کلمه عبور جدید</label>
+                    {{ form.confirm_password }}
+                </div>
+                <div class="form-group">
+                    <label>کلمه عبور جدید</label>
+                    {{ form.password }}
+                </div>
+                <div class="form-action">
+                    <button type="submit" class="submit-btn">ثبت اطلاعات</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+{% endblock %}

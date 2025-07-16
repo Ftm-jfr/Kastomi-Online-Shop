@@ -1,0 +1,198 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Other Products{% endblock %}
+{% block links %}
+    <link rel="stylesheet" href="{% static 'css/other-product.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="filters">
+            <div class="filters-header">
+                <span>فیلتر ها</span>
+                <span class="reset">حذف فیلترها</span>
+            </div>
+
+            <div class="filter-item">
+                <select>
+                    <option> برندها</option>
+                </select>
+            </div>
+
+            <div class="filter-item">
+                <select>
+                    <option>همه اندازه‌ها</option>
+                </select>
+            </div>
+
+            <div class="filter-item">
+                <select>
+                    <option>همه رنگ‌ها</option>
+                </select>
+            </div>
+
+            <div class="filter-item toggle">ارسال امروز
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+
+            </div>
+
+            <div class="filter-item toggle">فقط کالاهای موجود
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+
+            </div>
+
+            <div class="filter-item">
+                <select>
+                    <option>همه</option>
+                    <option>زیر ۱۰۰ هزار</option>
+                    <option>۱۰۰ تا ۲۰۰ هزار</option>
+                    <option>بیشتر از ۲۰۰ هزار</option>
+                </select>
+            </div>
+
+            <div class="filter-item">
+                <select>
+                    <option>همه مدل‌ها</option>
+                    <option>یقه گرد</option>
+                    <option>یقه هفت</option>
+                    <option>آستین بلند</option>
+                </select>
+            </div>
+
+            <div class="filter-item">
+                <select>
+                    <option>همه طرح‌ها</option>
+                    <option>بدون طرح</option>
+                    <option>با طرح چاپی</option>
+                    <option>نوشته‌دار</option>
+                </select>
+            </div>
+        </div>
+        <div class="main-section">
+
+            <div class="menu_container">
+                <div><a href="#" class="active">پربازدید ترین</a></div>
+                <div><a href="#">جدیدترین</a></div>
+                <div><a href="#">پرفروش ترین</a></div>
+                <div><a href="#">گران ترین</a></div>
+                <div><a href="#">ارزان ترین</a></div>
+            </div>
+            <div class="products">
+                <div class="product-card">
+                    <img src="../static/images/tshirt1.svg" alt="تی‌شرت زنانه">
+                    <div class="item-title">
+                        <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                        <button><img src="images/heart.svg"></button>
+                    </div>
+                    <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                    <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+                </div>
+                <div class="product-card">
+                    <img src="images/tshirt1.svg" alt="تی‌شرت زنانه">
+                    <div class="item-title">
+                        <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                        <button><img src="images/heart.svg"></button>
+                    </div>
+                    <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                    <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+                </div>
+                <div class="product-card">
+                    <img src="images/tshirt1.svg" alt="تی‌شرت زنانه">
+                    <div class="item-title">
+                        <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                        <button><img src="images/heart.svg"></button>
+                    </div>
+                    <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                    <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+                </div>
+                <div class="product-card">
+                    <img src="images/tshirt1.svg" alt="تی‌شرت زنانه">
+                    <div class="item-title">
+                        <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                        <button><img src="images/heart.svg"></button>
+                    </div>
+                    <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                    <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+                </div>
+                <div class="product-card">
+                    <img src="images/tshirt1.svg" alt="تی‌شرت زنانه">
+                    <div class="item-title">
+                        <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                        <button><img src="images/heart.svg"></button>
+                    </div>
+                    <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                    <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+                </div>
+                <div class="product-card">
+                    <img src="images/tshirt1.svg" alt="تی‌شرت زنانه">
+                    <div class="item-title">
+                        <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                        <button><img src="images/heart.svg"></button>
+                    </div>
+                    <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                    <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+                </div>
+                <div class="product-card">
+                    <img src="images/tshirt1.svg" alt="تی‌شرت زنانه">
+                    <div class="item-title">
+                        <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                        <button><img src="images/heart.svg"></button>
+                    </div>
+                    <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                    <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+                </div>
+                <div class="product-card">
+                    <img src="images/tshirt1.svg" alt="تی‌شرت زنانه">
+                    <div class="item-title">
+                        <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                        <button><img src="images/heart.svg"></button>
+                    </div>
+                    <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                    <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+                </div>
+                <div class="product-card">
+                    <img src="images/tshirt1.svg" alt="تی‌شرت زنانه">
+                    <div class="item-title">
+                        <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                        <button><img src="images/heart.svg"></button>
+                    </div>
+                    <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                    <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+                </div>
+            </div>
+            <div class="pagination-controls">
+                <button class="pagination-nav" aria-label="صفحه قبلی">
+                    <img src="images/arrow-right.svg" alt="پیکان راست">
+                </button>
+
+                <div class="pagination-pages">
+                    <button class="page-number">۱</button>
+                    <button class="page-number active">۲</button>
+                    <button class="page-number">۳</button>
+                    <button class="page-number">۴</button>
+                    <button class="page-number">۵</button>
+                    <button class="page-number">۶</button>
+                    <button class="page-number">۷</button>
+                    <button class="page-number">۸</button>
+                    <button class="page-number">۹</button>
+                    <button class="page-number">۱۰</button>
+                    <span class="page-ellipsis">...</span>
+                    <button class="page-number">۵۰</button>
+                </div>
+
+                <button class="pagination-nav" aria-label="صفحه بعدی">
+                    <img src="images/arrow-left2.svg" alt="پیکان چپ">
+                </button>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+

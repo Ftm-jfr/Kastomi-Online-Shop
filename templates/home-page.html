@@ -1,0 +1,641 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+{% block links %}
+    <link rel="stylesheet" href={% static 'css/home-page.css' %}>
+    <script src={% static 'js/home-page.js' %}></script>
+{% endblock %}
+
+
+{% block body %}
+<div class="main-container">
+    <section class="hero-banner-section">
+        <div class="banner-content-area">
+            <h3 class="banner-heading">آنلاین شاپ کاستومی</h3>
+            <p class="banner-text">
+                آنلاین شاپ کاستومی محصولات متنوعی داره و این امکان رو بهتون میده خودتون رنگ و طرح و نوشته ‌ی
+                روی محصولات رو انتخاب کنید
+            </p>
+            <div class="banner-action-buttons">
+                <a href="#" class="button-primary">
+                    <img src={% static 'images/brush.svg' %} class="button-icon" alt="Brush icon">
+                    شروع طراحی
+                </a>
+                <a href="#" class="button-secondary">دیدن محصولات</a>
+            </div>
+        </div>
+        <img src="{% static 'images/girls.svg' %}" alt="Custom T-shirt illustration" width="764" height="355">
+    </section>
+    <section class="product-categories-container">
+        <div class="section-header">
+            <div class="section-icon-title">
+                <img src="{% static 'images/medal-star.svg' %}" width="40" height="40" alt="آیکن دسته‌بندی">
+                <h3 class="category-heading">دسته بندی محصولات</h3>
+            </div>
+            <div class="header-divider"></div>
+        </div>
+
+        <div class="category-grid">
+            <a href="#" class="category-item">
+                <img src="{% static 'images/phone-case.svg' %}" alt="قاب موبایل">
+                <p class="category-name">قاب موبایل</p>
+            </a>
+
+            <a href="#" class="category-item">
+                <img src="{% static 'images/congrat-cart.svg'%}" alt="کارت تبریک">
+                <p class="category-name">کارت تبریک</p>
+            </a>
+
+            <a href="#" class="category-item">
+                <img src="{%static 'images/accessory.svg'%}" alt="اکسسوری">
+                <p class="category-name">اکسسوری</p>
+            </a>
+
+            <a href="#" class="category-item">
+                <img src="{% static 'images/stationery.svg' %}" alt="لوازم تحریر">
+                <p class="category-name">لوازم تحریر</p>
+            </a>
+
+            <a href="#" class="category-item">
+                <img src="{% static 'images/clothes.svg' %}" alt="لباس">
+                <p class="category-name">لباس</p>
+            </a>
+
+            <a href="#" class="category-item">
+                <img src="{% static 'images/home-decorative.svg' %}" alt="دکور خانه">
+                <p class="category-name">دکور خانه</p>
+            </a>
+        </div>
+    </section>
+    <section class="most-sales-container">
+        <div class="section-header">
+            <div class="section-icon-title">
+                <img src="{% static 'images/medal-star.svg' %}" width="40" height="40" alt="آیکن دسته‌بندی">
+                <h3 class="category-heading">پرفروش ترین ها</h3>
+            </div>
+            <div class="header-divider"></div>
+        </div>
+        <div class="most-sales-grid">
+            <div class="products">
+                <div class="product-card">
+                    <img src="{% static 'images/tshirt4.svg' %}" alt="تی‌شرت زنانه">
+                    <div class="item-title">
+                        <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                        <button><img src="{% static 'images/heart.svg' %}"></button>
+                    </div>
+                    <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                    <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+                </div>
+                <div class="product-card">
+                    <img src="{% static 'images/tshirt4.svg' %}" alt="تی‌شرت زنانه">
+                    <div class="item-title">
+                        <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                        <button><img src="{% static 'images/heart.svg' %}"></button>
+                    </div>
+                    <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                    <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+                </div>
+                <div class="product-card">
+                    <img src="{% static 'images/tshirt4.svg' %}" alt="تی‌شرت زنانه">
+                    <div class="item-title">
+                        <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                        <button><img src="{% static 'images/heart.svg' %}"></button>
+                    </div>
+                    <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                    <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+                </div>
+                <div class="product-card">
+                    <img src="{% static 'images/tshirt4.svg' %}" alt="تی‌شرت زنانه">
+                    <div class="item-title">
+                        <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                        <button><img src="{% static 'images/heart.svg' %}"></button>
+                    </div>
+                    <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                    <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+                </div>
+                <div class="product-card">
+                    <img src="{% static 'images/tshirt4.svg' %}" alt="تی‌شرت زنانه">
+                    <div class="item-title">
+                        <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                        <button><img src="{% static 'images/heart.svg' %}"></button>
+                    </div>
+                    <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                    <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+                </div>
+                <div class="product-card">
+                    <img src="{% static 'images/tshirt4.svg' %}" alt="تی‌شرت زنانه">
+                    <div class="item-title">
+                        <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                        <button><img src="{% static 'images/heart.svg' %}"></button>
+                    </div>
+                    <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                    <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+                </div>
+                <div class="product-card">
+                    <img src="{% static 'images/tshirt4.svg' %}" alt="تی‌شرت زنانه">
+                    <div class="item-title">
+                        <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                        <button><img src="{% static 'images/heart.svg' %}"></button>
+                    </div>
+                    <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                    <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+                </div>
+                <div class="product-card">
+                    <img src="{% static 'images/tshirt4.svg' %}" alt="تی‌شرت زنانه">
+                    <div class="item-title">
+                        <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                        <button><img src="{% static 'images/heart.svg' %}"></button>
+                    </div>
+                    <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                    <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="special-sale">
+        <div class="section-header">
+            <div class="section-icon-title">
+                <img src="{% static 'images/discount-shape.svg' %}" width="40" height="40" alt="آیکن دسته‌بندی">
+                <h3 class="category-heading">فروش ویژه</h3>
+            </div>
+            <div class="header-divider"></div>
+        </div>
+        <div class="special-sale-grid">
+            <a href="#" class="sale-main-item">
+                <img src="{% static 'images/home-furniture.svg' %}" alt="پیشنهاد ویژه اصلی">
+            </a>
+
+            <div class="sale-subgrid">
+                <a href="#" class="sale-card">
+                    <img src="{% static 'images/garment.svg' %}" alt="پیشنهاد ویژه ۱" class="sale-card-image">
+                </a>
+                <a href="#" class="sale-card discount-item">
+                    <img src="{% static 'images/school.svg' %}" alt="پیشنهاد ویژه ۲" class="sale-card-image">
+                    <img src="{% static 'images/discount-tag.svg' %}" alt="تخفیف" class="sale-discount-badge">
+                </a>
+
+                <a href="#" class="sale-card">
+                    <img src="{% static 'images/digital.svg' %}" alt="پیشنهاد ویژه ۳" class="sale-card-image">
+                </a>
+
+                <a href="#" class="sale-card">
+                    <img src="{% static 'images/sticker.svg' %}" alt="پیشنهاد ویژه ۴" class="sale-card-image">
+                </a>
+            </div>
+        </div>
+    </section>
+    <section class="popular-designs-container">
+        <div class="section-header">
+            <div class="section-icon-title">
+                <img src="{% static 'images/like-shapes.svg' %}" width="40" height="40" alt="آیکن دسته‌بندی">
+                <h3 class="category-heading">طرح های پرطرفدار</h3>
+            </div>
+            <div class="header-divider"></div>
+        </div>
+        <div class="popular-design-grid">
+            <div class="products">
+                <div class="product-card">
+                    <img src="{% static 'images/fruit-sticker.svg' %}" alt="استیکر ">
+                    <div class="item-title">
+                        <h6>استیکر فرندز</h6>
+                        <button><img src="{% static 'images/heart.svg' %}"></button>
+                    </div>
+                    <p>قابل طراحی و چاپ بر روی انواع محصولات</p>
+                    <button class="add-to-gallery">
+                        <img src="{% static 'images/gallery-add.svg' %}">افزودن به گالری
+                    </button>
+                </div>
+                <div class="product-card">
+                    <img src="{% static 'images/fruit-sticker.svg' %}" alt="استیکر ">
+                    <div class="item-title">
+                        <h6>استیکر فرندز</h6>
+                        <button><img src="{% static 'images/heart.svg' %}"></button>
+                    </div>
+                    <p>قابل طراحی و چاپ بر روی انواع محصولات</p>
+                    <button class="add-to-gallery">
+                        <img src="{% static 'images/gallery-add.svg' %}">افزودن به گالری
+                    </button>
+                </div>
+                <div class="product-card">
+                    <img src="{% static 'images/fruit-sticker.svg' %}" alt="استیکر ">
+                    <div class="item-title">
+                        <h6>استیکر فرندز</h6>
+                        <button><img src="{% static 'images/heart.svg' %}"></button>
+                    </div>
+                    <p>قابل طراحی و چاپ بر روی انواع محصولات</p>
+                    <button class="add-to-gallery">
+                        <img src="{% static 'images/gallery-add.svg' %}">افزودن به گالری
+                    </button>
+                </div>
+                <div class="product-card">
+                    <img src="{% static 'images/fruit-sticker.svg' %}" alt="استیکر ">
+                    <div class="item-title">
+                        <h6>استیکر فرندز</h6>
+                        <button><img src="{% static 'images/heart.svg' %}"></button>
+                    </div>
+                    <p>قابل طراحی و چاپ بر روی انواع محصولات</p>
+                    <button class="add-to-gallery">
+                        <img src="{% static 'images/gallery-add.svg' %}">افزودن به گالری
+                    </button>
+                </div>
+                <div class="product-card">
+                    <img src="{% static 'images/fruit-sticker.svg' %}" alt="استیکر ">
+                    <div class="item-title">
+                        <h6>استیکر فرندز</h6>
+                        <button><img src="{% static 'images/heart.svg' %}"></button>
+                    </div>
+                    <p>قابل طراحی و چاپ بر روی انواع محصولات</p>
+                    <button class="add-to-gallery">
+                        <img src="{% static 'images/gallery-add.svg' %}">افزودن به گالری
+                    </button>
+                </div>
+                <div class="product-card">
+                    <img src="{% static 'images/fruit-sticker.svg' %}" alt="استیکر ">
+                    <div class="item-title">
+                        <h6>استیکر فرندز</h6>
+                        <button><img src="{% static 'images/heart.svg' %}"></button>
+                    </div>
+                    <p>قابل طراحی و چاپ بر روی انواع محصولات</p>
+                    <button class="add-to-gallery">
+                        <img src="{% static 'images/gallery-add.svg' %}">افزودن به گالری
+                    </button>
+                </div>
+                <div class="product-card">
+                    <img src="{% static 'images/fruit-sticker.svg' %}" alt="استیکر ">
+                    <div class="item-title">
+                        <h6>استیکر فرندز</h6>
+                        <button><img src="{% static 'images/heart.svg' %}"></button>
+                    </div>
+                    <p>قابل طراحی و چاپ بر روی انواع محصولات</p>
+                    <button class="add-to-gallery">
+                        <img src="{% static 'images/gallery-add.svg' %}">افزودن به گالری
+                    </button>
+                </div>
+                <div class="product-card">
+                    <img src="{% static 'images/fruit-sticker.svg' %}" alt="استیکر ">
+                    <div class="item-title">
+                        <h6>استیکر فرندز</h6>
+                        <button><img src="{% static 'images/heart.svg' %}"></button>
+                    </div>
+                    <p>قابل طراحی و چاپ بر روی انواع محصولات</p>
+                    <button class="add-to-gallery">
+                        <img src="{% static 'images/gallery-add.svg' %}">افزودن به گالری
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="top-designers">
+        <div class="section-header">
+            <div class="section-icon-title">
+                <img src="{% static 'images/star-icon.svg' %}" width="40" height="40" alt="آیکن دسته‌بندی">
+                <h3 class="category-heading">طراحان برتر</h3>
+            </div>
+            <div class="header-divider"></div>
+        </div>
+        <div class="designer-list">
+            <a href="#" class="designer-card">
+                <div class="designer-card-header">
+                    <div class="designer-avatar"><img src="{% static 'images/Profile-pic.svg' %}" alt="عکس پروفایل"></div>
+                </div>
+                <div class="designer-name">
+                    <p>نگار زمانی</p>
+                </div>
+                <div class="designer-meta">
+                    <div class="meta-item"><p>دنبال کنندگان: ۴۰۰</p></div>
+                    <div class="meta-item"><p>تعداد طرح ها: ۵۶</p></div>
+                    <div class="meta-item"><p>آمار فروش: ۳۷۰</p></div>
+                </div>
+                <div class="designer-gallery">
+                    <div><img src="{% static 'images/pattern1.svg' %}" alt="طرح ۱"></div>
+                    <div><img src="{% static 'images/pattern2.svg' %}" alt="طرح ۲"></div>
+                    <div><img src="{% static 'images/pattern3.svg' %}" alt="طرح ۳"></div>
+                </div>
+                <button class="designer-follow-btn">
+                    <img src="{% static 'images/profile-add.svg' %}">
+                    دنبال کردن
+                </button>
+            </a>
+            <a href="#" class="designer-card">
+                <div class="designer-card-header">
+                    <div class="designer-avatar"><img src="{% static 'images/Profile-pic.svg' %}" alt="عکس پروفایل"></div>
+                </div>
+                <div class="designer-name">
+                    <p>نگار زمانی</p>
+                </div>
+                <div class="designer-meta">
+                    <div class="meta-item"><p>دنبال کنندگان: ۴۰۰</p></div>
+                    <div class="meta-item"><p>تعداد طرح ها: ۵۶</p></div>
+                    <div class="meta-item"><p>آمار فروش: ۳۷۰</p></div>
+                </div>
+                <div class="designer-gallery">
+                    <div><img src="{% static 'images/pattern1.svg' %}" alt="طرح ۱"></div>
+                    <div><img src="{% static 'images/pattern2.svg' %}" alt="طرح ۲"></div>
+                    <div><img src="{% static 'images/pattern3.svg' %}" alt="طرح ۳"></div>
+                </div>
+                <button class="designer-follow-btn">
+                    <img src="{% static 'images/profile-add.svg' %}">
+                    دنبال کردن
+                </button>
+            </a>
+            <a href="#" class="designer-card">
+                <div class="designer-card-header">
+                    <div class="designer-avatar"><img src="{% static 'images/Profile-pic.svg' %}" alt="عکس پروفایل"></div>
+                </div>
+                <div class="designer-name">
+                    <p>نگار زمانی</p>
+                </div>
+                <div class="designer-meta">
+                    <div class="meta-item"><p>دنبال کنندگان: ۴۰۰</p></div>
+                    <div class="meta-item"><p>تعداد طرح ها: ۵۶</p></div>
+                    <div class="meta-item"><p>آمار فروش: ۳۷۰</p></div>
+                </div>
+                <div class="designer-gallery">
+                    <div><img src="{% static 'images/pattern1.svg' %}" alt="طرح ۱"></div>
+                    <div><img src="{% static 'images/pattern2.svg' %}" alt="طرح ۲"></div>
+                    <div><img src="{% static 'images/pattern3.svg' %}" alt="طرح ۳"></div>
+                </div>
+                <button class="designer-follow-btn">
+                    <img src="{% static 'images/profile-add.svg' %}">
+                    دنبال کردن
+                </button>
+            </a>
+            <a href="#" class="designer-card">
+                <div class="designer-card-header">
+                    <div class="designer-avatar"><img src="{% static 'images/Profile-pic.svg' %}" alt="عکس پروفایل"></div>
+                </div>
+                <div class="designer-name">
+                    <p>نگار زمانی</p>
+                </div>
+                <div class="designer-meta">
+                    <div class="meta-item"><p>دنبال کنندگان: ۴۰۰</p></div>
+                    <div class="meta-item"><p>تعداد طرح ها: ۵۶</p></div>
+                    <div class="meta-item"><p>آمار فروش: ۳۷۰</p></div>
+                </div>
+                <div class="designer-gallery">
+                    <div><img src="{% static 'images/pattern1.svg' %}" alt="طرح ۱"></div>
+                    <div><img src="{% static 'images/pattern2.svg' %}" alt="طرح ۲"></div>
+                    <div><img src="{% static 'images/pattern3.svg' %}" alt="طرح ۳"></div>
+                </div>
+                <button class="designer-follow-btn">
+                    <img src="{% static 'images/profile-add.svg' %}">
+                    دنبال کردن
+                </button>
+            </a>
+            <a href="#" class="designer-card">
+                <div class="designer-card-header">
+                    <div class="designer-avatar"><img src="{% static 'images/Profile-pic.svg' %}" alt="عکس پروفایل"></div>
+                </div>
+                <div class="designer-name">
+                    <p>نگار زمانی</p>
+                </div>
+                <div class="designer-meta">
+                    <div class="meta-item"><p>دنبال کنندگان: ۴۰۰</p></div>
+                    <div class="meta-item"><p>تعداد طرح ها: ۵۶</p></div>
+                    <div class="meta-item"><p>آمار فروش: ۳۷۰</p></div>
+                </div>
+                <div class="designer-gallery">
+                    <div><img src="{% static 'images/pattern1.svg' %}" alt="طرح ۱"></div>
+                    <div><img src="{% static 'images/pattern2.svg' %}" alt="طرح ۲"></div>
+                    <div><img src="{% static 'images/pattern3.svg' %}" alt="طرح ۳"></div>
+                </div>
+                <button class="designer-follow-btn">
+                    <img src="{% static 'images/profile-add.svg' %}">
+                    دنبال کردن
+                </button>
+            </a>
+            <a href="#" class="designer-card">
+                <div class="designer-card-header">
+                    <div class="designer-avatar"><img src="{% static 'images/Profile-pic.svg' %}" alt="عکس پروفایل"></div>
+                </div>
+                <div class="designer-name">
+                    <p>نگار زمانی</p>
+                </div>
+                <div class="designer-meta">
+                    <div class="meta-item"><p>دنبال کنندگان: ۴۰۰</p></div>
+                    <div class="meta-item"><p>تعداد طرح ها: ۵۶</p></div>
+                    <div class="meta-item"><p>آمار فروش: ۳۷۰</p></div>
+                </div>
+                <div class="designer-gallery">
+                    <div><img src="{% static 'images/pattern1.svg' %}" alt="طرح ۱"></div>
+                    <div><img src="{% static 'images/pattern2.svg' %}" alt="طرح ۲"></div>
+                    <div><img src="{% static 'images/pattern3.svg' %}" alt="طرح ۳"></div>
+                </div>
+                <button class="designer-follow-btn">
+                    <img src="{% static 'images/profile-add.svg' %}">
+                    دنبال کردن
+                </button>
+            </a>
+            <a href="#" class="designer-card">
+                <div class="designer-card-header">
+                    <div class="designer-avatar"><img src="{% static 'images/Profile-pic.svg' %}" alt="عکس پروفایل"></div>
+                </div>
+                <div class="designer-name">
+                    <p>نگار زمانی</p>
+                </div>
+                <div class="designer-meta">
+                    <div class="meta-item"><p>دنبال کنندگان: ۴۰۰</p></div>
+                    <div class="meta-item"><p>تعداد طرح ها: ۵۶</p></div>
+                    <div class="meta-item"><p>آمار فروش: ۳۷۰</p></div>
+                </div>
+                <div class="designer-gallery">
+                    <div><img src="{% static 'images/pattern1.svg' %}" alt="طرح ۱"></div>
+                    <div><img src="{% static 'images/pattern2.svg' %}" alt="طرح ۲"></div>
+                    <div><img src="{% static 'images/pattern3.svg' %}" alt="طرح ۳"></div>
+                </div>
+                <button class="designer-follow-btn">
+                    <img src="{% static 'images/profile-add.svg' %}">
+                    دنبال کردن
+                </button>
+            </a>
+            <a href="#" class="designer-card">
+                <div class="designer-card-header">
+                    <div class="designer-avatar"><img src="{% static 'images/Profile-pic.svg' %}" alt="عکس پروفایل"></div>
+                </div>
+                <div class="designer-name">
+                    <p>نگار زمانی</p>
+                </div>
+                <div class="designer-meta">
+                    <div class="meta-item"><p>دنبال کنندگان: ۴۰۰</p></div>
+                    <div class="meta-item"><p>تعداد طرح ها: ۵۶</p></div>
+                    <div class="meta-item"><p>آمار فروش: ۳۷۰</p></div>
+                </div>
+                <div class="designer-gallery">
+                    <div><img src="{% static 'images/pattern1.svg' %}" alt="طرح ۱"></div>
+                    <div><img src="{% static 'images/pattern2.svg' %}" alt="طرح ۲"></div>
+                    <div><img src="{% static 'images/pattern3.svg' %}" alt="طرح ۳"></div>
+                </div>
+                <button class="designer-follow-btn">
+                    <img src="{% static 'images/profile-add.svg' %}">
+                    دنبال کردن
+                </button>
+            </a>
+        </div>
+    </section>
+    <section class="gift-banner-container">
+        <div class="right-banner">
+            <div class="banner-title">
+                <h4>محصولات مناسب هدیه دادن به آقایان</h4>
+                <a href="#" class="banner-btn">دیدن محصولات</a>
+            </div>
+            <img src="{% static 'images/dadi1.svg' %}" class="banner-image">
+        </div>
+        <div class="left-banner">
+            <div class="banner-title">
+                <h4>محصولات مناسب هدیه دادن به خانم ها</h4>
+                <a href="#" class="banner-btn">دیدن محصولات</a>
+            </div>
+            <img src="{% static 'images/mom1.svg' %}" class="banner-image">
+        </div>
+    </section>
+    <section class="most-recent-design-container">
+        <div class="section-header">
+            <div class="section-icon-title">
+                <img src="{% static 'images/brush-black.svg' %}" width="40" height="40" alt="آیکن دسته‌بندی">
+                <h3 class="category-heading">جدیدترین طرح های هفته</h3>
+            </div>
+            <div class="header-divider"></div>
+        </div>
+        <div class="products">
+            <div class="first">
+                <h4> محصولاتی که طراحی شده رو ببینید و در صورت نیاز طرحشون رو مطابق سلیقه خودتون تغییر بدید</h4>
+                <div class="picture-first">
+                    <img class="img-top" src="{% static 'images/gift-bag-icon.svg' %}">
+                    <img class="img-bottom" src="{% static 'images/gift-bag-icon2.svg' %}">
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="{% static 'images/bag.svg' %}" alt="تی‌شرت زنانه">
+                <div class="item-title">
+                    <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                    <button><img src="{% static 'images/heart.svg' %}"></button>
+                </div>
+                <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+            </div>
+            <div class="product-card">
+                <img src="{% static 'images/bag.svg' %}" alt="تی‌شرت زنانه">
+                <div class="item-title">
+                    <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                    <button><img src="{% static 'images/heart.svg' %}"></button>
+                </div>
+                <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+            </div>
+            <div class="product-card">
+                <img src="{% static 'images/bag.svg' %}" alt="تی‌شرت زنانه">
+                <div class="item-title">
+                    <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                    <button><img src="{% static 'images/heart.svg' %}"></button>
+                </div>
+                <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+            </div>
+            <div class="product-card">
+                <img src="{% static 'images/bag.svg' %}" alt="تی‌شرت زنانه">
+                <div class="item-title">
+                    <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                    <button><img src="{% static 'images/heart.svg' %}"></button>
+                </div>
+                <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+            </div>
+            <div class="product-card">
+                <img src="{% static 'images/bag.svg' %}" alt="تی‌شرت زنانه">
+                <div class="item-title">
+                    <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                    <button><img src="{% static 'images/heart.svg' %}"></button>
+                </div>
+                <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+            </div>
+            <div class="product-card">
+                <img src="{% static 'images/bag.svg' %}" alt="تی‌شرت زنانه">
+                <div class="item-title">
+                    <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                    <button><img src="{% static 'images/heart.svg' %}"></button>
+                </div>
+                <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+            </div>
+            <div class="product-card">
+                <img src="{% static 'images/bag.svg' %}" alt="تی‌شرت زنانه">
+                <div class="item-title">
+                    <h6>تیشرت زنانه کد ۱۴۶۰</h6>
+                    <button><img src="{% static 'images/heart.svg' %}"></button>
+                </div>
+                <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                <h5 class="price">۲۰۰,۰۰۰ تومان</h5>
+            </div>
+        </div>
+    </section>
+    <section class="event-card-container">
+        <div class="media-arrangement">
+            <img src="{% static 'images/Frame-bride.svg' %}" class="vertical-media">
+            <div class="central-grid">
+                <img src="{% static 'images/cake-wedding.svg' %}">
+                <img src="{% static 'images/Frame-flower.svg' %}">
+                <img src="{% static 'images/Frame-stand.svg' %}">
+                <img src="{% static 'images/wedding-table.svg' %}">
+            </div>
+            <img src="{% static 'images/Frame-red-table.svg' %}" alt="right" class="vertical-media">
+        </div>
+        <div class="text-content-block">
+            <p class="section-heading">کارت دعوت عروسی رو خودتون طراحی کنید</p>
+            <a href="#" class="action-button-filled">
+                <img src="{% static 'images/brush.svg' %}" class="button-icon">
+                شروع طراحی
+            </a>
+        </div>
+    </section>
+    <section class="favorites-container">
+        <div class="section-header">
+            <div class="section-icon-title">
+                <img src="{% static 'images/favorite-icon.svg' %}" width="40" height="40" alt="آیکن دسته‌بندی">
+                <h3 class="category-heading">علاقمندی ها</h3>
+            </div>
+            <div class="header-divider"></div>
+        </div>
+        <div class="products">
+            <div class="product-card">
+                <img src="{% static 'images/men-tshirt.svg' %}" alt="تی‌شرت مردانه">
+                <div class="item-title">
+                    <h6>تیشرت مردانه</h6>
+                    <button><img src="{% static 'images/heart-red.svg' %}" class="favorite"></button>
+                </div>
+                <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                <h5 class="price">۱۵۰,۰۰۰ تومان</h5>
+            </div>
+            <div class="product-card">
+                <img src="{% static 'images/men-tshirt.svg' %}" alt="تی‌شرت مردانه">
+                <div class="item-title">
+                    <h6>تیشرت مردانه</h6>
+                    <button><img src="{% static 'images/heart-red.svg' %}" class="favorite"></button>
+                </div>
+                <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                <h5 class="price">۱۵۰,۰۰۰ تومان</h5>
+            </div>
+            <div class="product-card">
+                <img src="{% static 'images/men-tshirt.svg' %}" alt="تی‌شرت مردانه">
+                <div class="item-title">
+                    <h6>تیشرت مردانه</h6>
+                    <button><img src="{% static 'images/heart-red.svg' %}" class="favorite"></button>
+                </div>
+                <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                <h5 class="price">۱۵۰,۰۰۰ تومان</h5>
+            </div>
+            <div class="product-card">
+                <img src="{% static 'images/men-tshirt.svg' %}" alt="تی‌شرت مردانه">
+                <div class="item-title">
+                    <h6>تیشرت مردانه</h6>
+                    <button><img src="{% static 'images/heart-red.svg' %}" class="favorite"></button>
+                </div>
+                <p>جنس نخ، رنگ‌ بندی متنوع، قابل طراحی</p>
+                <h5 class="price">۱۵۰,۰۰۰ تومان</h5>
+            </div>
+        </div>
+
+    </section>
+</div>
+{% endblock %}
